@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(assets/romm.jpg);
+    background-size: cover;
+}
+
+.booking-end-container{
+    width: 800px;
+    height: 120vh;
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #081b29;
+    border-radius: 10px;
+    box-shadow: 0 0 20px orangered;
+}
+
+.booking-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.booking-header .logo{
+    padding-bottom: 15px;
+}
+.booking-header h2{
+    color: orangered;
+}
+
+.booking-end-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    padding: 30px 0 50px 50px;
+}
+
+.row-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    margin-bottom: 25px;
+
+}
+.gender-option{
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+}
+.gender-option #radio{
+    margin-right: 5px;
+}
+.gender-option p{
+    margin-right: 15px;
+}
+form p{
+    padding-bottom: 5px;
+    /* margin-top: 20px; */
+    color: #fff;
+    font-weight: 600;
+}
+#input-name,
+#input-age,
+#input-phone{
+    border: 1px solid orangered;
+    border-radius: 4px;
+}
+#input-name,
+#input-age,
+#input-phone:active{
+    box-shadow: 0 0 5px orangered;
+}
+
+form select{
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    background: orangered;
+    color: #fff;
+    font-weight: 600;
+    padding-left: 5px;
+}
+
+/* ========================inputs============================== */
+#input-name{
+    width: 300px;
+    height: 30px;
+}
+
+#input-age{
+    width: 50px;
+    height: 25px;
+}
+
+#input-phone{
+    width: 150px;
+    height: 25px;
+}
+
+/* ==============================Pop Up========================= */
+
+.container{
+    /* width: 100%;
+    height: 100vh;
+    background-color: rgb(106, 106, 223); */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.submit-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    padding: 10px 60px;
+    border: 0;
+    outline: none;
+    background: orangered;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 30px;
+}
+.btn:hover{
+    box-shadow: 0 0 10px orangered;
+    background-color: transparent;
+    transition: .5s;
+
+}
+
+.popup{
+    width: 400px;
+    background: #fff;
+    box-shadow: 0 0 10px orangered;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    visibility: hidden;
+    transition: transform 0.4s ,top 0.4s;
+
+}
+.open-popup{
+    visibility: visible;
+    transform: translate(-50%,-50%) scale(1);
+    top: 50%;
+
+}
+.popup img{
+    width: 50px;
+    margin-top: -30px;
+    border-radius: 50%;
+}
+
+.popup h2{
+    font-size: 35px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.popup button{
+    width: 100%;
+    margin: 20px 0;
+    padding: 5px 0;
+    border: none;
+    outline: none;
+    background-color: orangered;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* ==============Media Screen================ */
+
+@media screen and (max-width:1000px){
+        
+.booking-end-container{
+    width: 700px;
+    height: 100vh;
+}
+}
+
+
+@media screen and (max-width:786px){
+        
+    .booking-end-container{
+        width: 500px;
+        height: 100vh;
+        margin-top: 50px;
+    }
+    }
+
+
+@media screen and (max-width:786px){
+        
+    .booking-end-container{
+        width: 350px;
+        height: 100vh;
+        margin-top: 50px;
+    }
+
+    #input-name{
+        width: 200px;
+        height: 30px;
+    }
+
+    .booking-header h2{
+        font-size: 18px;
+    }
+
+
+    form p{
+        font-size: 14px;
+    }
+
+    .submit-container .btn{
+        width: 80px;
+        height: 25px;
+        font-size: 15px;
+        padding: 5px;
+    }
+
+  
+    }

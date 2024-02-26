@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-Up</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="booking-end-container">
+        <div class="booing-end-content">
+            <div class="booking-header">
+                <a href="#" class="logo">
+                    <img src="assets/logo.png" class="img-fluid" width="100px" height="50px">
+                </a>
+                <h2>
+                    Book Rooms
+                </h2>
+            </div>
+            
+            <form>
+
+                <div class="row-flex">
+                    <p id="username">Full Name</p> 
+                <input id="input-name" type="text" name="username">
+               
+                </div>
+                
+                <p id="gender">Please select your gender </p>
+                <div class="gender-option">
+                    <input id="radio" type="radio" name="gender" value="Male"
+                    checked="checked" /> <p> Male</p>
+                    <input id="radio" type="radio" name="gender" value="Female" />
+                     <p> Female</p>
+                </div>
+                
+                <div class="row-flex">
+                    <p id="age">Age</p>
+                    <input id="input-age" type="text" name="age">
+                </div>
+                <div class="row-flex">
+                    <p id="phone">Phone Number</p>
+                    <input id="input-phone" type="text" name="phone-number">
+                </div>
+
+                <div class="row-flex">
+
+                <p id="identification">Upload your Identification card/Driving License</p>
+                <input type="file" name="image" >
+
+                </div>
+               
+
+                 <p id="room">Choose room type</p> 
+                 <select name="ages">
+                     <option value="male">One Bed Room</option>
+                     <option value="male">Two Bed Room</option>
+                     <option value="male">Three Bed Room</option>
+ 
+                 </select>
+
+            </form>
+            <div class="submit-container">
+                <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+            </div>
+            
+            <div class="container">
+                <div class="popup" id="popup">
+                    <img src="assets/orangered-tick.png">
+                    <h2>Thank You!</h2>
+                    <p>You have successfuly booked!</p>
+                    <button type="button" onclick="closePopup()">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let popup=document.getElementById('popup');
+        function openPopup(){
+            popup.classList.add("open-popup")
+        }
+    
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+       </script> 
+</body>
+</html>
